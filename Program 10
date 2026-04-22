@@ -1,0 +1,36 @@
+program 10
+input:-
+#include <stdio.h>
+int main() 
+{
+    int a, b;
+    char op;
+    printf("Enter expression (a + b): ");
+    scanf("%d %c %d", &a, &op, &b);
+    switch(op) 
+    {
+        case '+': printf("Result = %d", a + b);
+        break;
+        case '-': printf("Result = %d", a - b); 
+        break;
+        case '*': printf("Result = %d", a * b); 
+        break;
+        case '/': printf("Result = %d", a / b); 
+        break;
+        case '%': printf("Result = %d", a % b);
+        break;
+        default: printf("Invalid operator");
+    }
+    return 0;
+}
+output :-
+Enter expression (a + b): 5 + 5
+result=10
+Enter expression (a - b): 5 - 5
+result=0
+Enter expression (a * b): 5 * 5
+result=25
+Enter expression (a / b): 5 / 5
+result=1
+Enter expression (a % b): 5 % 5
+result =0
