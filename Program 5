@@ -34,5 +34,5 @@ int main()
     return 0;
 }
 output:-
-initial list - 3 2 1
+ initial list - 3 2 1
 Reversed list - 1 2 3
