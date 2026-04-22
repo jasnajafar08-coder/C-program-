@@ -1,0 +1,38 @@
+program 5
+input:-
+#include <stdio.h>
+#include <stdlib.h>
+struct node 
+{
+    int data;
+    struct node* next;
+};
+int main()
+{
+    struct node *head = NULL, *temp, *prev = NULL, *curr;   
+    for (int i = 1; i <= 3; i++)
+    {
+        temp = (struct node*)malloc(sizeof(struct node));
+        temp->data = i;
+        temp->next = head;
+        head = temp;
+    }    
+    curr = head;
+    while (curr != NULL)
+    {
+        struct node* next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev;  
+    while (head != NULL)
+    {
+        printf("%d ", head->data);
+        head = head->next;
+    }
+    return 0;
+}
+output:-
+initial list - 3 2 1
+Reversed list - 1 2 3
